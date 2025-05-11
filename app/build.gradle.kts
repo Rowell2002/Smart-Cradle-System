@@ -1,5 +1,7 @@
 plugins {
-    alias(libs.plugins.android.application)
+    // Add the dependency for the Google services Gradle plugin
+    id("com.google.gms.google-services") version "4.4.2" apply false
+    id("com.android.application")
 }
 
 android {
@@ -40,4 +42,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+    implementation(platform("com.google.firebase:firebase-bom:33.13.0"))
+    implementation("com.google.firebase:firebase-analytics")
 }
