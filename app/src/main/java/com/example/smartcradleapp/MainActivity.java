@@ -12,5 +12,7 @@ import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
-
+    CardView cardFire, cardWetBed, cardSound, cardSecurity, cardSleepAnalysis;
+    TextView latestAlert;
+    Switch themeSwitch;
 }
